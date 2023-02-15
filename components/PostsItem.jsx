@@ -31,24 +31,23 @@ const PostsItem = ({ post, compact }) => {
           </Link>
           <p className="text-slate-600 pt-1 pb-4">{excerpt}</p>
         </div>
-        {!compact && (
-          <div className="flex items-center justify-between mt-6">
-            <Link
-              href={`/blogs/${post.slug}`}
-              className=" text-blue-500 hover:text-blue-800  "
-            >
-              Read More
-            </Link>
-            <picture className="flex items-center justify-center space-x-2">
-              <img
-                src={author_image}
-                alt="error"
-                className=" h-7 w-7 object-cover rounded-full"
-              />
-              <p className="font-semibold text-sm">{author}</p>
-            </picture>
-          </div>
-        )}
+
+        <div className="flex items-center justify-between mt-6">
+          <Link
+            href={`/blogs/${post.slug}`}
+            className=" text-blue-500 hover:text-blue-800  "
+          >
+            Read More
+          </Link>
+          <picture className="flex items-center justify-center space-x-2">
+            <img
+              src={author_image}
+              alt="error"
+              className=" h-7 w-7 object-cover rounded-full"
+            />
+            <p className="font-semibold text-sm">{author}</p>
+          </picture>
+        </div>
       </div>
     </div>
   );
