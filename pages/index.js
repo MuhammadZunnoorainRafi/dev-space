@@ -9,6 +9,7 @@ import Search from '@/components/Search';
 
 export default function Home({ posts }) {
   return (
+    
     <Layout>
       <Search />
       <h1

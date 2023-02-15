@@ -10,7 +10,7 @@ import { getPosts } from '@/lib/posts';
 export default function BlogPage({ posts, numPages, currentPage, categories }) {
   return (
     <Layout>
-      <div className="flex justify-between flex-col md:flex-row">
+      <div className="flex justify-between flex-col-reverse md:flex-row">
         <div className="w-3/4 mr-10">
           <h1 className="text-5xl border-b-4 p-5 font-bold">Blog</h1>
 
@@ -23,7 +23,7 @@ export default function BlogPage({ posts, numPages, currentPage, categories }) {
           <Pagination currentPage={currentPage} numPages={numPages} />
         </div>
 
-        <div className="w-1/4">
+        <div className="md:w-1/4">
           <CategoryList categories={categories} />
         </div>
       </div>

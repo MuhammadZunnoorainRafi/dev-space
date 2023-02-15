@@ -14,7 +14,7 @@ export default function Search() {
         setSearchResults([]);
       } else {
         const res = await fetch(`/api/search?q=${searchTerm}`);
-        const { results } = await res.json();
+        const results = await res.json();
 
         setSearchResults(results);
       }
@@ -24,7 +24,7 @@ export default function Search() {
   }, [searchTerm]);
 
   return (
-    <div className="relative bg-gray-600 p-4">
+    <div className="relative mt-3 rounded-full bg-gray-600 p-4">
       <div className="container mx-auto flex items-center justify-center md:justify-end">
         <div className="relative text-gray-600 w-72">
           <form>
