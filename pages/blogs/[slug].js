@@ -12,7 +12,7 @@ function SinglePost({ frontMatter, content, slug }) {
   return (
     <Layout title={slug}>
       <BackButton url="/blogs" />
-      <div className="py-5 mt-3 mb-6 space-y-6 px-7 shadow-xl rounded-lg">
+      <div className="py-5 mt-3 mb-6 space-y-6 px-7 overflow-x-hidden shadow-xl rounded-lg">
         <div className="flex pb-6 items-center justify-between">
           <h1 className="font-bold  text-5xl">{title}</h1>
           <Category>{category}</Category>
