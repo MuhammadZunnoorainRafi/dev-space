@@ -4,6 +4,7 @@ import Layout from '@/components/Layout';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import Image from 'next/image';
 import path from 'path';
 function SinglePost({ frontMatter, content, slug }) {
   const { title, date, excerpt, cover_image, category, author, author_image } =
@@ -18,9 +19,11 @@ function SinglePost({ frontMatter, content, slug }) {
           <Category>{category}</Category>
         </div>
         <picture>
-          <img
+          <Image
             src={cover_image}
-            className="w-full h-[700px]  rounded-lg "
+            width={900}
+            height={900}
+            className=" mx-auto  rounded-lg "
             alt="error"
           />
         </picture>
